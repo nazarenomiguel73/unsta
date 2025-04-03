@@ -1,0 +1,229 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DFE8E6;
+    color: #333;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #A0430A;
+}
+.sobre-mi-contenido {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.perfil img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.habilidades ul, .experiencia ol {
+    list-style: none;
+    padding: 0;
+}
+
+.habilidades li {
+    margin-bottom: 10px;
+}
+
+.destacado {
+    background-color: #A0430A;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.academica-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.aprobadas, .pendientes, .por-cursar {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.aprobadas table, .pendientes table {
+    width: 100%;
+}
+
+.aprobadas td:last-child {
+    text-align: right;
+}
+
+.aprobadas h3 {
+    color: green;
+}
+
+.pendientes h3 {
+    color: red;
+}
+.compañeros-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.compañero {
+    width: 250px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.compañero img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.compañero a {
+    color: #A0430A;
+    text-decoration: none;
+}
+
+.compañero a:hover {
+    text-decoration: underline;
+}
+.aspiraciones-contenido {
+    padding: 20px;
+}
+
+.aspiraciones-contenido ul {
+    list-style: none;
+    padding: 0;
+}
+
+.aspiraciones-contenido li {
+    margin-bottom: 10px;
+}
+
+.barra-progreso {
+    background-color: #f0f0f0;
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.progreso-interno {
+    background-color: #A0430A;
+    height: 100%;
+    border-radius: 10px;
+}
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contenido a {
+    color: #A0430A;
+    text-decoration: none;
+}
+
+.footer-contenido a:hover {
+    text-decoration: underline;
+}
+.menu-toggle {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #A0430A;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+.habilidades li {
+    position: relative;
+}
+
+.habilidades li::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.habilidades li:hover::after {
+    opacity: 1;
+}
+body {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.compañero:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
