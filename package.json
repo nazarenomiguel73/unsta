@@ -1,0 +1,24 @@
+{
+  "name": "unsta",
+  "version": "1.0.0",
+  "description": "repositorio de la unsta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazarenomiguel73/unsta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazarenomiguel73/unsta/issues"
+  },
+  "homepage": "https://github.com/nazarenomiguel73/unsta#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "jsonfile": "^6.1.0"
+  }
+}
